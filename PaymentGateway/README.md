@@ -65,9 +65,9 @@ razorpay.setKeyID("rzp_test_XXXXXXXXXXXXXXXX") // Replace with your actual Test 
 # 📸Screenshots
 
 
-| Screenshot 1 | Screenshot 2 |
-|-------------|-------------|
-| ![Image](https://github.com/user-attachments/assets/0c0731dd-3d69-474b-81df-f705a8e78e30) | ![Image](https://github.com/user-attachments/assets/fc52c130-16d7-427c-a4db-b3788cc1a852) |
+| Screenshot 1 | Screenshot 2 | Screenshot 3|
+|-------------|-------------|--------------|
+| ![Image](https://github.com/user-attachments/assets/0c0731dd-3d69-474b-81df-f705a8e78e30) | ![Image](https://github.com/user-attachments/assets/fc52c130-16d7-427c-a4db-b3788cc1a852) | ![Image](https://github.com/user-attachments/assets/78401976-b001-40e3-b6e8-0256bbcddbbe) |
 
 ## License
 
