@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Wheat"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="-80dp"
+        android:layout_below="@+id/top_view">
+
+        <!-- Connection Status Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardConnectionStatus"
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            app:cardCornerRadius="15dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="@color/black"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_margin="12dp"
+
+            app:cardElevation="12dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvConnectionStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connecting..."
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="16dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Pin 1 Status Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPin1Status"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            app:cardCornerRadius="15dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_margin="12dp"
+
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/CadetBlue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_door"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tvPin1Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Gate: Unknown"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <ProgressBar
+                    android:id="@+id/progressPin1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"/>
+
+                <!-- Horizontal Layout for Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnPin1On"
+                        android:layout_width="wrap_content"
+                        android:layout_height="64dp"
+                        android:backgroundTint="@android:color/holo_green_dark"
+                        android:text="ON"
+                        android:layout_marginEnd="20dp"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"/>
+
+                    <Button
+                        android:id="@+id/btnPin1Off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="64dp"
+                        android:backgroundTint="@android:color/holo_red_dark"
+                        android:text="OFF"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Pin 2 Status Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPin2Status"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            app:cardCornerRadius="15dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_margin="12dp"
+
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/CadetBlue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_door"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tvPin2Status"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Second Gate: Unknown"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <ProgressBar
+                    android:id="@+id/progressPin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"/>
+
+                <!-- Horizontal Layout for Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnPin2On"
+                        android:layout_width="wrap_content"
+                        android:layout_height="64dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@android:color/holo_green_dark"
+                        android:text="ON"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"/>
+
+                    <Button
+                        android:id="@+id/btnPin2Off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="64dp"
+                        android:backgroundTint="@android:color/holo_red_dark"
+                        android:text="OFF"
+                        android:enabled="false"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Controller"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
